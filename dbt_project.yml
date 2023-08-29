@@ -36,3 +36,25 @@ models:
     # Applies to all files under models/example/
     example:
       materialized: view
+name: 'my_new_project'
+version: '1.0.0'
+config-version: 2
+
+profile: 'default'
+
+model-paths: ["models"]
+
+sources:
+  - name: elephantsql_source
+    type: postgres
+    host: trumpet.db.elephantsql.com
+    port: 5432
+    user: nfzuiloj
+    password: 6Y83VSwHDSYP7Xct3XmDjaXDi_onP23Q
+    database: nfzuiloj
+    schema: public
+    tables:
+      - name: production_plan
+        identifier: production_plan
+      - name: manufacturing_units
+        identifier: manufacturing_units
